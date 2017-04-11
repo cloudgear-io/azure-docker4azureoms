@@ -7,7 +7,7 @@ keywords: docker, docker for azure , install, orchestration, management, azure, 
 ---
 **[Docker for Azure Release Notes](https://docs.docker.com/docker-for-azure/release-notes/). This template has two simple additions for pushing OMS dockerized agent in each of the nodes (managers and workers) on top of [Template - Docker for Azure Stable Channel 17.03.1 CE Release date: 03/30/2017](https://download.docker.com/azure/stable/Docker.tmpl)**
 
-<a href="https://preview.portal.azure.com/#create/Microsoft.Template/uri/http%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank"><img alt="Deploy to Azure" src="https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/dockerce4azure.png" /></a>
+<a href="https://preview.portal.azure.com/#create/Microsoft.Template/uri/http%3A%2F%2Fraw.githubusercontent.com%2Fcloudgear-io%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank"><img alt="Deploy to Azure" src="https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/dockerce4azure.png" /></a>
 
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank">  <img src="http://armviz.io/visualizebutton.png" /> </a> 
 
@@ -21,7 +21,6 @@ Table of Contents
    * [Docker for Azure with OMS](#azure-docker4azureoms)
       * [Prerequisites](#prerequisites)
       * [Deploy and Visualize](#deploy-and-visualize)
-      * [MSFT OSCC](#msft-oscc)
       * [Tips](#tips)
       * [Some Samples](#some-samples)
       * [Spring Cloud Netflix Samples](#spring-cloud-netflix-samples)
@@ -43,15 +42,15 @@ Table of Contents
  
   <code> $ docker run -ti docker4x/create-sp-azure sp-name rg-name rg-region</code>
   
-* [Obtain Workspace ID and Key for OMS Solutions](https://github.com/Azure/azure-docker4azureoms/blob/master/README.md#usage-of-operational-management-suite)
+* [Obtain Workspace ID and Key for OMS Solutions](https://github.com/cloudgear-io/azure-docker4azureoms/blob/master/README.md#usage-of-operational-management-suite)
  * Deploy the above mentioned solutions.
  * Obtain OMS Workspace ID
  * Obtain Workspace Key
 
 #### Deploy and Visualize
-<a href="https://preview.portal.azure.com/#create/Microsoft.Template/uri/http%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank"><img alt="Deploy to Azure" src="https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/dockerce4azure.png" /></a>
+<a href="https://preview.portal.azure.com/#create/Microsoft.Template/uri/http%3A%2F%2Fraw.githubusercontent.com%2Fcloudgear-io%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank"><img alt="Deploy to Azure" src="https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/dockerce4azure.png" /></a>
 
-<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2FAzure%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank">  <img src="http://armviz.io/visualizebutton.png" /> </a> 
+<a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcloudgear-io%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank">  <img src="http://armviz.io/visualizebutton.png" /> </a> 
 
 **[Docker for Azure Release Notes](https://docs.docker.com/docker-for-azure/release-notes/). This template has two simple additions for pushing OMS dockerized agent in each of the nodes (managers and workers) on top of [Template - Docker for Azure Stable Channel 17.03.1 CE Release date: 03/30/2017](https://download.docker.com/azure/stable/Docker.tmpl)**
 
@@ -77,12 +76,12 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 <code>docker stack up deploy -c --path to docker-compose.yml file-- --stackname--</code>
 
 #### Some Samples
-<code> wget  https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/docker-compose-ekv3.yml && docker stack deploy -c docker-compose-ekv3.yml elasticsearchkibana </code>
+<code> wget  https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/docker-compose-ekv3.yml && docker stack deploy -c docker-compose-ekv3.yml elasticsearchkibana </code>
 
 *  ElasticSearch Service: http://Docker4AzureRGExternalLoadBalance:9200/ 
 *  Kibana Service: http://Docker4AzureRGExternalLoadBalance:5601/
 
-<code>wget https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/docker-compose-votingappv3.yml && docker stack deploy -c docker-compose-votingappv3.yml votingapp</code>
+<code>wget https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/docker-compose-votingappv3.yml && docker stack deploy -c docker-compose-votingappv3.yml votingapp</code>
 
 *  Vote: http://Docker4AzureRGExternalLoadBalance:5002/ 
 *  Voting Results: http://Docker4AzureRGExternalLoadBalance:5003
@@ -94,7 +93,7 @@ For more information see the [Code of Conduct FAQ](https://opensource.microsoft.
 #### Spring Cloud Netflix Samples
 Forked from https://github.com/sqshq/PiggyMetrics, this example demonstrates the use of Netlix OSS API with Spring. The docker-compose file has been updated to make use of the latest features of Compose 3.0; it's still a work in progress. The service container logs are drained into OMS.
 
-<code> wget https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/docker-compose-piggymetricsv3.yml && docker stack deploy -c docker-compose-piggymetricsv3.yml piggymetrics </code>
+<code> wget https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/docker-compose-piggymetricsv3.yml && docker stack deploy -c docker-compose-piggymetricsv3.yml piggymetrics </code>
 
 *  Rabbit MQ Service: http://Docker4AzureRGExternalLoadBalancer:15672/ (guest/guest)
 *  Eureka Service: http://Docker4AzureRGExternalLoadBalance:8761/ 
@@ -119,20 +118,20 @@ Let's see our system behavior under load: Account service calls Statistics servi
 #### Simplest Topology Specs
 The Simplest topology spec of 1 Manager and 2 worker nodes is as follows for [ Docker for Azure Stable Channel 17.03.1 CE Release date: 03/30/2017 - Release Date](https://docs.docker.com/docker-for-azure/release-notes/)
 
-![Simplest Topology](https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/Docker4AzurebyRancher1.png)
+![Simplest Topology](https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/Docker4AzurebyRancher1.png)
 
 ##### Multi Manager with scaled worker
 3 Swarm Managers with Scaled 3rd Worker as below : 
 
-![3 Swarm Managers with Autoscaled 3rd Worker](https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/Docker4AzurebyRancherAutoScale1.png)
+![3 Swarm Managers with Autoscaled 3rd Worker](https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/Docker4AzurebyRancherAutoScale1.png)
 
 ##### Raft HA
 The consensus algorithm must ensure that if any state machine applies set x to 3 as the nth command, no other state machine will ever apply a different nth command. Raftscope as below for 5 Swarm Managers.
-![Raft HA](https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/raft.gif)
+![Raft HA](https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/raft.gif)
 
 #### Reporting bugs
 
-Please report bugs  by opening an issue in the [GitHub Issue Tracker](https://github.com/Azure/azure-docker4azureoms/issues)
+Please report bugs  by opening an issue in the [GitHub Issue Tracker](https://github.com/cloudgear-io/azure-docker4azureoms/issues)
 
 #### Patches and pull requests
 
@@ -152,7 +151,7 @@ Patches can be submitted as GitHub pull requests. If using GitHub please make su
 * Then one can login to https://OMSWorkspaceName.portal.mms.microsoft.com/#Workspace/overview/solutions/details/index?solutionId=Containers and check all containers running for Docker for Azure and use Log Analytics and if Required perform automated backups of the APK Based sys using the corresponding Solutions for OMS.
 * OMS Monitoring 3 Swarm Managers with 3 workers and all their containers.
 
-![OMS Docker 4 Azure](https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/OMSDocker4Azure1.png)
+![OMS Docker 4 Azure](https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/OMSDocker4Azure1.png)
 #### Scaling
 
 VMSS auto scale is by default off to be addressed in a [later version](https://forums.docker.com/t/autoscaling-azure-virtual-machine-scale-sets/26030/4)
@@ -164,11 +163,11 @@ VMSS auto scale is by default off to be addressed in a [later version](https://f
 
 * Automatic OMS Registering of new workers in the swarm as in the pic last. (Manually added 2 new workers  as per the next below pic and hence 3 Managers + 3 Workers initially deployed via this template + 2 manually scaled worker nodes = Total 8).
 
-![OMS Post Scaling](https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/ScaledWorkers1.png)
+![OMS Post Scaling](https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/ScaledWorkers1.png)
 
 * Rancher overlay for manually "scaled" workers and topology
 
-![Rancher Post Scaling](https://raw.githubusercontent.com/Azure/azure-docker4azureoms/master/ScaledRancherWorkers.png)
+![Rancher Post Scaling](https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/ScaledRancherWorkers.png)
 
 #### Note on Docker EE and Docker CE for Azure
 
