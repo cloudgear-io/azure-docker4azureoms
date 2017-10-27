@@ -35,7 +35,7 @@ Table of Contents
       * [Note on Docker EE and Docker CE for Azure](#note-on-docker-ee-and-docker-ce-for-azure)
 
 ### Docker for AWS
-<a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=AWSMPDockerEEforAWSNewVPC&templateURL=https:%2F%2Fraw.githubusercontent.com%2Fccloudgear-io%2Fazure-docker4azureoms%2Fmaster%2Fdockeree1706aws.templ" target="_blank"><img alt="Deploy to AWS" src="https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/console.png" />
+<a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=AWSMPDockerEEforAWSNewVPC&templateURL=https:%2F%2Fs3.eu-central-1.amazonaws.com%2Fcf-templates-1ud7g8bg90of8-eu-central-1/2017300ZP2-dockeree1706aws.template" target="_blank"><img alt="Deploy to AWS" src="https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/console.png" />
 #### Prerequisites
 
 * [Containerized helper-script to help create the Service Principal](https://docs.docker.com/docker-for-azure/#service-principal)
