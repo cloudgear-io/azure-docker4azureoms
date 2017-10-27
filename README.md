@@ -1,7 +1,7 @@
 ---
 title: Deploy Docker for Azure with OMS
 
-description: Learn how to deploy Docker for Azure with one click along with Operational Management Suite Container monitoring, using an ARM (Azure Resource Manager) Template and deploy service stacks
+description: Learn how to deploy Docker for AWS and Azure with one click along with Operational Management Suite Container monitoring, using an ARM (Azure Resource Manager) Template and deploy service stacks
 
 keywords: docker, docker for azure , install, orchestration, management, azure, swarm, OMS, monitoring, scaling
 ---
@@ -12,12 +12,12 @@ keywords: docker, docker for azure , install, orchestration, management, azure, 
 <a href="http://armviz.io/#/?load=https%3A%2F%2Fraw.githubusercontent.com%2Fcloudgear-io%2Fazure-docker4azureoms%2Fmaster%2Fazuredeploy.json" target="_blank">  <img src="http://armviz.io/visualizebutton.png" /> </a> 
 
 
-# azure-docker4azureoms
-Docker for Azure with OMS and some more stacks
+# azure-docker4azureoms and aws
+Docker for AWS and  Azure with OMS and some more stacks
 
 Table of Contents
 =================
-
+   * [Docker for AWS](#docker-for-aws)
    * [Docker for Azure with OMS](#azure-docker4azureoms)
       * [Prerequisites](#prerequisites)
       * [Deploy and Visualize](#deploy-and-visualize)
@@ -33,7 +33,9 @@ Table of Contents
       * [Usage of Operational Management Suite](#usage-of-operational-management-suite)
       * [Scaling](#scaling)
       * [Note on Docker EE and Docker CE for Azure](#note-on-docker-ee-and-docker-ce-for-azure)
-         
+
+### Docker for AWS
+<a href="https://console.aws.amazon.com/cloudformation/home?region=eu-central-1#/stacks/new?stackName=AWSMPDockerEEforAWSNewVPC&templateURL=https:%2F%2Fraw.githubusercontent.com%2Fccloudgear-io%2Fazure-docker4azureoms%2Fmaster%2Fdockeree1706aws.templ" target="_blank"><img alt="Deploy to AWS" src="https://raw.githubusercontent.com/cloudgear-io/azure-docker4azureoms/master/console.png" />
 #### Prerequisites
 
 * [Containerized helper-script to help create the Service Principal](https://docs.docker.com/docker-for-azure/#service-principal)
